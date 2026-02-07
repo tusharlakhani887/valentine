@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Will You Be My Valentine?</title>
+
+  <style>
+    body {
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+    }
+
+    p {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    #yes {
+      background-color: #ff4d6d;
+      color: white;
+    }
+
+    #no {
+      background-color: white;
+      color: #ff4d6d;
+      position: relative;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Hey Jhannaaaa❤️</h1>
+  <p>Will you be my Valentine?</p>
+
+  <div>
+    <button id="yes">Yes 💖</button>
+    <button id="no">No 😌</button>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById("no");
+
+    noBtn.addEventListener("mouseover", () => {
+      const x = Math.random() * 80;
+      const y = Math.random() * 80;
+      noBtn.style.position = "absolute";
+      noBtn.style.left = x + "vw";
+      noBtn.style.top = y + "vh";
+    });
+
+    document.getElementById("yes").addEventListener("click", () => {
+      document.body.innerHTML = `
+        <h1>YAYYYYY ❤️🎉</h1>
+        <p>You just made me the happiest person.</p>
+        <p>See you on Valentine’s 😌🌹</p>
+      `;
+    });
+  </script>
+
+</body>
+</html>
